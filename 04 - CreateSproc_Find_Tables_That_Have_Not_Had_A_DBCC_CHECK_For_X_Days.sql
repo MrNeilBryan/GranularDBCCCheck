@@ -27,7 +27,8 @@ GO
 -- --- ---- --- -----------
 --
 ------------------------------------------------------------------------------------------------------------------------
-ALTER PROCEDURE [dbo].[usp_Find_Tables_That_Have_Not_Had_A_DBCC_CHECK_For_X_Days] @DaysBack INT = - 14
+ALTER PROCEDURE [dbo].[usp_Find_Tables_That_Have_Not_Had_A_DBCC_CHECK_For_X_Days] @DaysBack 
+	@DaysBack INT = -14, @NumberOfRecords INT OUTPUT
 AS
 BEGIN
 	--------------------------------------------------------------------------------------------------------------------
@@ -125,8 +126,8 @@ ORDER BY _CommandLog.LastDBCCTableCheck DESC';
 
 		RAISERROR (@ProcessingStage, 10, 1);
 
-		SELECT *
-		FROM @Results;
+		SELECT * FROM @Results;
+		SELECT @NumberOfRecords = COUNT(1) FROM @Results;
 
 		----------------------------------------------------------------------------------------------------------------
 		-- Finish
