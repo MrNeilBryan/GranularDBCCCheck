@@ -49,6 +49,9 @@ To install the acripts in this repository:
 	04 - CreateSproc_Find_Tables_That_Have_Not_Had_A_DBCC_CHECK_For_X_Days.sql -- Check for tables that have not had a 
                                  						      check table for more than x days, where
 										      x is an input parameter.
+                                                                                      An output parameter has been added which
+										      will return the number of tables missing
+										      a CHECKTABLE to the caller.
 	05 - CreateSproc_usp_DBCC_Checks.sql  -- Run the DBCC Checks.
  
 
