@@ -41,3 +41,4 @@ BEGIN
     PRINT 'Table dbo.CommandLog already exists';
 END
  
+GO
