@@ -27,7 +27,7 @@ GO
 -- --- ---- --- -----------
 --
 ------------------------------------------------------------------------------------------------------------------------
-ALTER PROCEDURE [dbo].[usp_Find_Tables_That_Have_Not_Had_A_DBCC_CHECK_For_X_Days] @DaysBack 
+ALTER PROCEDURE [dbo].[usp_Find_Tables_That_Have_Not_Had_A_DBCC_CHECK_For_X_Days]  
 	@DaysBack INT = -14, @NumberOfRecords INT OUTPUT
 AS
 BEGIN
